@@ -17,7 +17,6 @@ public class Question1_1 {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String[] words = {"abcde", "hello", "apple", "kite", "padle"};
 		for (String word : words) {
 			System.out.println(word + ": " + isUnique(word));
