@@ -1,5 +1,7 @@
 package Helpers;
 
+import DataStructures.LinkedListNode;
+
 public class HelperMethods {
 
 	/* Assorted methods taken from https://github.com/careercup/ctci/*/
@@ -38,5 +40,17 @@ public class HelperMethods {
 			}
 			System.out.println();
 		}
+	}
+
+	public static LinkedListNode<Integer> randomLinkedList(int N, int min, int max) {
+		LinkedListNode<Integer> root = new LinkedListNode<Integer>(randomIntInRange(min, max));
+		LinkedListNode<Integer> prev = root;
+		for (int i = 1; i < N; i++) {
+			int data = randomIntInRange(min, max);
+			LinkedListNode<Integer> next = new LinkedListNode<Integer>(data);
+			prev.next = next;
+			prev = next;
+		}
+		return root;
 	}
 }
